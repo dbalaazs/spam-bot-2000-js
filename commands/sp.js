@@ -3,9 +3,14 @@ module.exports = {
     aliases: ['shitpost'],
 	description: 'shitpost func.',
 	execute(message, args) {
-		if (+args[1] < 50 && +args[1] >0){
-            for(i = 0; i<+args[1]; i++){
-                message.channel.send(args[0])
+        const last = args.pop()
+        function replaceAll(string, search, replace) {
+            return string.split(search).join(replace);
+        }
+		if (+last < 51 && +last >0){
+            text = args.toString()
+            for(i = 0; i<+last; i++){
+                message.channel.send(replaceAll(text, ',', ' '))
             }
         }
         else {message.channel.send('You messed something up, boss...')}
