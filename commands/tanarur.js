@@ -9,11 +9,15 @@ module.exports = {
             const dispatcher = connection.play('./misc/tanarur.mp3');
 
             dispatcher.on('start', () => {
-                console.log('tanarur.mp3 is now playing!');
+                let d = new Date()
+                date = d.toTimeString().split(' ')[0]
+                console.log(date + ' tanarur.mp3 is now playing!');
             });
 
             dispatcher.on('finish', () => {
-                console.log("tanarur.mp3 has finished playing!\n");
+                const d = new Date()
+                date = d.toTimeString().split(' ')[0]
+                console.log(date + " tanarur.mp3 has finished playing!\n");
                 connection.disconnect();
             });
             
