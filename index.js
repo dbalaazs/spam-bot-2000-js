@@ -2,7 +2,8 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { OpusEncoder } = require('@discordjs/opus');
 const { prefix, token } = require('./config.json');
-require('log-timestamp');
+const d = new Date()
+date = d.toTimeString().split(' ')[0]
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -16,7 +17,7 @@ for (const file of commandFiles) {
 
 
 client.once('ready', () => {
-	console.log("Ready!\n");
+	console.log(date + " Ready!\n");
 });
 
 client.on('message', message => {
@@ -32,7 +33,9 @@ client.on('message', message => {
     try {
 	    command.execute(message, args);
     } catch (error) {
-	    console.error(error);
+		const d = new Date()
+        date = d.toTimeString().split(' ')[0]
+	    console.error(`${date} ${error}`);
 	    message.reply('there was an error trying to execute that command!');
     }
 });
@@ -42,7 +45,6 @@ client.login(token);
 
 /*
 TODO:
--FIX TIMESTAMP (1 HOUR LATE)
 -TRY TO ADD A CONSOLE NOTIF WHEN SP FUNCTION FINISHES (DIDNT WORK BEFORE CAUSE FUNCTION FINISHES BEFORE THE MESSAGES ARE ACTUALLY SENT OOUT)
 -UPGRADE SP FUNC TO TAKE IN MESSAGES WITH SPACES (HAVE TO MAKE THE LAST ARG BE THE NUMBER NOT THE SECOND ONE)
 */
