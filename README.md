@@ -11,3 +11,9 @@ Spam bot 2000 is an open-source discord bot. It currently has a couple commands,
 #### 2: You have to write in you terminal: npm install (This will install the needed packages)
 #### 3: You have to make a config.json file, put in your token and a prefix
 #### 4: Run the bot :)
+
+An example for config.json:
+{
+    "token": "your token",
+    "prefix": "-"
+}
