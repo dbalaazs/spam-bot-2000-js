@@ -1,0 +1,26 @@
+{
+  "name": "spambot2000",
+  "version": "0.5.0",
+  "description": "Discord spam & etc. bot",
+  "main": "index.js",
+  "author": "Balazs Domotor",
+  "private": true,
+  "homepage": "https://github.com/dbalaazs/spam-bot-2000-js",
+  "repository": "github:dbalaazs/spam-bot-2000-js",
+  "bugs": "https://github.com/dbalaazs/spam-bot-2000-js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "array-move": "^3.0.1",
+    "discord.js": "^12.5.1",
+    "erit-ytdl": "*",
+    "ffmpeg-static": "^4.2.3",
+    "simple-youtube-api": "^5.1.1",
+    "ytdl-core": "^4.4.3"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
