@@ -3,7 +3,7 @@ Spam bot 2000 is an open-source discord bot. It currently has a couple commands,
 ## The current commands:
 ### -sp or shitpost: This commands can spam a specified message (now even with spaces) and repost it up to 50 times
 (I've noticed stability issues with more messages, but you can manually change it)
-### -tanarur: It joins you voice channel and plays a .mp3 file. You can change this file, but you either have to name the new file exactly as the previous one, or have to change it's name in the code
+### -tanarur: It joins you voice channel and plays a .mp3 file. To use this you have to make a misc folder with the file inside titled "tanarur.mp3" or alternatively you can change it's name in the code
 ### -help: This is just a basic help menu
 ### -pog: It replies with champ
 ## Installing the bot:
